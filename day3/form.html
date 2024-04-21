@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- FORMS -->
+    <!--
+ accept-charset : Specifies the character encodings that are to be used for the form submission. >
+ action         : Specifies where to send the form-data when a form is submitted.
+ autocomplete   : Specifies whether a form should have autocomplete on or off.
+ enctype        : Specifies how the form-data should be encoded when submitting it to the server (only for method="post").
+ target         : Specifies where to display the response that is received after submitting the form
+ name           : Specifies the name of a form.
+ novalidate     : Specifies that the form should not be validated when submitted.
+ method         :Specifies the HTTP method to use when sending form-data (POST or GET).
+   -->
+    <form method="post" enctype="multipart/form-data" action="upload.php">
+        <input type="file" name="pic" />
+        <input type="submit" value="Upload" />
+    </form>
+
+    <!-- INPUT CONTROL ELEMENTS -->
+
+    <!-- 
+    class : Indicates the Class of the input
+
+    id : Indicates the ID of the input
+
+    type : Identifies the type of input control to display. Acceptable values are hidden, text, tel, url, email,
+    password, date, time, number, range, color, checkbox, radio, file, submit, image, reset, and button. Defaults to
+    text if not specified, if the value is invalid, or if the browser does not support the type specified.
+
+    name : Indicates the name of the input
+    disabled: Boolean value that indicates the input should be disabled. Disabled controls cannot be edited, are not
+    sent on form submission, and cannot receive focus.
+
+    checked : When the value of the type attribute is radio or checkbox, the presence of this Boolean attribute
+    indicates that the control is selected by default; otherwise it is ignored.
+   
+    multiple : HTML5 Indicates multiple files or values can be passed (Applies only to file and email type inputs )
+
+    placeholder : HTML5 A hint to the user of what can be entered in the control . The placeholder text must not contain
+    carriage returns or line-feeds
+
+    autocomplete : HTML5 Indicates whether the value of the control can be automatically completed by the browser.
+
+    readonly : Boolean value that indicates the input is not editable. Readonly controls are still sent on form
+    submission, but will not receive focus. HTML5: This attribute is ignored when the value of type
+    attribute is either set to hidden, range, color, checkbox, radio, file or button.
+
+    required : HTML5 Indicates a value must be present or the element must be checked in order for the form to be
+    submitted
+
+    alt : An alternative text for images, in case they are not displayed.
+
+    autofocus : The <input> element should get the focus when page loads.
+
+    value : Specifies the value of <input> element.
+
+    step : The step attribute specifies the legal number intervals. It works with the following input types: number,
+
+    range, date, datetime-local, month, time and week
+
+     -->
+
+    <h2>Text</h2>
+    <p><input type="text" name="username" placeholder="Enter your username"></p>
+
+    <h2>Checkbox and Radio Buttons</h2>
+    <div>
+        red: <input type="radio" name="color" id="red" value="#F00">
+        green: <input type="radio" name="color" id="green" value="#0F0">
+        blue: <input type="radio" name="color" id="blue" value="#00F">
+
+        <label for="red">checkbox</label>
+        <input type="checkbox" name="color" value="#F00" id="red">
+    </div>
+
+    <h2>Input Validation</h2>
+    <p><input type="email" name="email" required></p>
+
+    <h2>Color</h2>
+    <p><input type="color" name="color"></p>
+
+    <h2>Password</h2>
+    <p><input type="password" name="password" autofocus></p>
+
+
+    <h2>File</h2>
+    <p><input type="file" name="fileUpload"></p>
+
+    <h2>Button</h2>
+    <p><button type="button">Click Me</button></p>
+
+    <h2>Submit</h2>
+    <p><input type="submit" value="Submit"></p>
+
+    <h2>Reset</h2>
+    <p><input type="reset" value="Reset"></p>
+
+    <h2>Hidden</h2>
+    <p><input type="hidden" name="token" value=""></p>
+
+    <h2>Tel</h2>
+    <p><input type="tel" name="phone"></p>
+
+    <h2>Email</h2>
+    <p><input type="email" name="email"></p>
+
+    <h2>Number</h2>
+    <p><input type="number" name="quantity" min="1" max="100"></p>
+
+    <h2>Range</h2>
+    <p><input type="range" name="volume" min="0" max="100"></p>
+
+    <h2>Search</h2>
+    <p><input type="search" name="search"></p>
+
+    <h2>Image</h2>
+    <p><input type="image" src="submit.png" alt="Submit"></p>
+
+    <h2>Week</h2>
+    <p><input type="week" name="week"></p>
+
+    <h2>Url</h2>
+    <p><input type="url" name="website"></p>
+
+    <h2>DateTime-Local</h2>
+    <p><input type="datetime-local" name="meetingDateTime"></p>
+
+    <h2>Month</h2>
+    <p><input type="month" name="birthMonth"></p>
+
+    <h2>Time</h2>
+    <p><input type="time" name="appointmentTime"></p>
+
+    <h2>DateTime (Global)</h2>
+    <p><input type="datetime" name="eventDateTime"></p>
+
+    <h2>Date</h2>
+    <p><input type="date" name="birthdate"></p>
+
+    <!-- Button Groups -->
+
+    <fieldset>
+        <legend>Theme color:</legend>
+        <p>
+            <input type="radio" name="color" id="red1" value="#F00">
+            <label for="red">Red</label>
+        </p>
+        <p>
+            <input type="radio" name="color" id="green1" value="#0F0">
+            <label for="green1">Green</label>
+        </p>
+        <p>
+            <input type="radio" name="color" id="blue1" value="#00F">
+            <label for="blue1">Blue</label>
+        </p>
+    </fieldset>
+
+    <!-- Input Validation -->
+
+    <!-- Minimum / Maximum Length -->
+    <form action="">
+        minlength <input minlength="3">
+        maxlength <input maxlength="5">
+        minlength && maxlength<input minlength="3" maxlength="5">
+        <input type="submit" value="submit" name="" id="">
+        <input type="reset" value="reset">
+    </form>
+
+    <!-- Specifying a range -->
+    <form action="">
+        Marks: <input type="number" size="12" name="marks" min="0" max="100" />
+        Subject Feedback: <input type="range" size="2" name="feedback" min="1" max="5" />
+        <input type="submit" value="submit" name="" id="">
+    </form>
+
+    <!-- Match a Pattern -->
+    <form action="">
+        <input pattern="\d*" title="Numbers only, please.">
+        <input type="submit" value="submit" name="" id="">
+    </form>
+
+    <!-- Accept File Type -->
+    file:<input type="file" accept="image/*" title="Only images are allowed">
+</body>
+
+</html>
