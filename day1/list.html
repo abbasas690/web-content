@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  ORDERED LISTS,, AND . -->
+    <ol>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+    </ol>
+    <!--  Manually changing the numbers -->
+    <ol start="3">
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li>Yet Another Item</li>
+    </ol>
+    <!-- You can also explicitly set a certain list item to a specific number. Further list items after one with a specified value 
+          will continue incrementing by one from that list item's value, ignoring where the parent list was at -->
+    <ol start="5">
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li value="4">A Reset Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+    </ol>
+
+    <!-- You can reverse the numbering by adding -->
+    <ol reversed>
+        <li>Item</li>
+        <li>Some Other Item</li>
+        <li value="4">A Reset Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+    </ol>
+    <!-- <ol type="1|a|A|i|I"> 
+     1 Default value - Decimal numbers 1,2,3,4
+     a Alphabetically ordered (lowercase) a,b,c,d
+     A Alphabetically ordered (uppercase) A,B,C,D
+     i Roman Numerals (lowercase) i,ii,iii,iv
+     I Roman Numerals (uppercase) I,II,III,IV
+ -->
+    <!-- UNORDERED LISTS -->
+    <ul>
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+    </ul>
+    <!-- <ul type="disc | circle | square" -->
+    <ul type="square">
+        <li>Item</li>
+        <li>Another Item</li>
+        <li>Yet Another Item</li>
+    </ul>
+
+    <!-- Nested lists -->
+    <!-- You can nest lists to represent sub-items of a list item. -->
+    <ul>
+        <li>item 1</li>
+        <li>item 2
+            <ul>
+                <li>sub-item 2.1</li>
+                <li>sub-item 2.2</li>
+            </ul>
+        </li>
+        <li>item 3</li>
+    </ul>
+
+    <!-- DESCRIPTION LISTS -->
+    <dl>
+        <dt>name 1</dt>
+        <dd>value for 1</dd>
+        <dt>name 2</dt>
+        <dd>value for 2</dd>
+    </dl>
+
+
+</body>
+
+</html>
