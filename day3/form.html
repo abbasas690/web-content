@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="iso-2022">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -10,18 +10,20 @@
 <body>
     <!-- FORMS -->
     <!--
- accept-charset : Specifies the character encodings that are to be used for the form submission. >
+ accept-charset : Specifies the character encodings that are to be used for the form submission. 
  action         : Specifies where to send the form-data when a form is submitted.
  autocomplete   : Specifies whether a form should have autocomplete on or off.
  enctype        : Specifies how the form-data should be encoded when submitting it to the server (only for method="post").
  target         : Specifies where to display the response that is received after submitting the form
  name           : Specifies the name of a form.
  novalidate     : Specifies that the form should not be validated when submitted.
- method         :Specifies the HTTP method to use when sending form-data (POST or GET).
+ method         : Specifies the HTTP method to use when sending form-data (POST or GET).
    -->
     <form method="post" enctype="multipart/form-data" action="upload.php">
         <input type="file" name="pic" />
-        <input type="submit" value="Upload" />
+        <!-- <input type="submit" value="Upload" /> -->
+        <!-- <input type="submit" value="upload"> -->
+        <button type="submit">dkjfl</button>
     </form>
 
     <!-- INPUT CONTROL ELEMENTS -->
@@ -73,7 +75,7 @@
 
     <h2>Checkbox and Radio Buttons</h2>
     <div>
-        red: <input type="radio" name="color" id="red" value="#F00">
+        red: <input type="radio" name="color" id="red" value="#F00" checked="">
         green: <input type="radio" name="color" id="green" value="#0F0">
         blue: <input type="radio" name="color" id="blue" value="#00F">
 
@@ -82,7 +84,7 @@
     </div>
 
     <h2>Input Validation</h2>
-    <p><input type="email" name="email" required></p>
+    <p><input type="email" name="email" value="abaa@gamil.com"></p>
 
     <h2>Color</h2>
     <p><input type="color" name="color"></p>
@@ -152,9 +154,10 @@
         <p>
             <input type="radio" name="color" id="red1" value="#F00">
             <label for="red">Red</label>
+            <label for="red1">red1</label>
         </p>
         <p>
-            <input type="radio" name="color" id="green1" value="#0F0">
+            <input type="radio" name="color" id="green1" value="#0F0" checked>
             <label for="green1">Green</label>
         </p>
         <p>
@@ -167,8 +170,9 @@
 
     <!-- Minimum / Maximum Length -->
     <form action="">
-        minlength <input minlength="3">
-        maxlength <input maxlength="5">
+        <label> minlength <input minlength="3"></label>
+
+        maxlength: <input maxlength="5">
         minlength && maxlength<input minlength="3" maxlength="5">
         <input type="submit" value="submit" name="" id="">
         <input type="reset" value="reset">
@@ -176,14 +180,14 @@
 
     <!-- Specifying a range -->
     <form action="">
-        Marks: <input type="number" size="12" name="marks" min="0" max="100" />
+        Marks: <input type="number" size="15" name="marks" min="0" max="100" />
         Subject Feedback: <input type="range" size="2" name="feedback" min="1" max="5" />
         <input type="submit" value="submit" name="" id="">
     </form>
 
     <!-- Match a Pattern -->
     <form action="">
-        <input pattern="\d*" title="Numbers only, please.">
+        <input pattern="[a-z]*" title="Numbers only, please.">
         <input type="submit" value="submit" name="" id="">
     </form>
 
